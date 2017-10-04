@@ -1,0 +1,224 @@
+@import "compass/reset";
+@import "compass";
+@import "vars";
+
+html {
+	height: 100%;
+	font-family: "Fira Sans", sans-serif;
+	font-weight: $fontw-s;
+	@include rsp(font-size, 100%, 100%);
+	line-height: 1.5rem;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    // background-color: $bgcol;
+    @include bggradient;
+}
+
+/* * * * * *  HEADER  * * * * * */
+
+.header {
+	z-index: 2;
+    width:100%;
+    position: absolute;
+    top: 0;
+}
+
+.top {
+    box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: $headerheight-l;
+    border-bottom: 1px solid $bordercol;
+    background-color: $headerbg;
+    transition: background-color $trns;
+}
+
+.collapsed {
+    // background-color: $clpsdcol;
+    @include background-image(linear-gradient(to right, $clpsdcol1, $clpsdcol2));
+    border: 0px;
+    // opacity: 0.8;
+    height: $headerheight-s;
+    transition: background-color $trns, opacity $trns;
+    margin-bottom: $headerheight-l;
+}
+
+.menu div.title {
+    display: block;
+    @include rsp(font-weight, $fontw-m, $fontw-s);
+    @include rsp(font-size, 1.2rem, 1.2rem);
+    line-height: $headerheight-l;
+    color: $titlecol;
+    vertical-align: middle;
+    @include rsp(padding-left, $margin-s, $margin-l);
+    @include rsp(width, $titlewidth-s, $titlewidth-l);
+    @media #{$l} {
+    	transition: padding-left;
+    }
+}
+
+.top div {
+    float: left;
+    box-sizing: border-box;
+    @include rsp(width, (100% - $titlewidth-s) / 2, (100% - $titlewidth-l) / 2);
+    height: 100%;
+    color: $menutxtcol;
+}
+
+.top div:nth-child(n+2) {
+	border-left: 1px solid $bordercol;
+}
+
+
+.collapsed div:nth-child(n+2) {
+	border-left: 0px;
+}
+
+.top div a {
+	display: block;
+    line-height: 3rem;
+    // color: $menutxtcol;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.about {
+	position: static;
+	display: none;
+	height: 100%;
+	@include rsp(padding,
+				 2em $margin-s,
+				 2em $margin-l * 1.5);
+	color: $menutxtcol;
+}
+
+.about a {
+	text-decoration: underline;
+	color: inherit;
+}
+
+.contact {
+	position: static;
+	display: none;
+}
+
+.contact a {
+	color: $menutxtcol;
+}
+
+.contact div {
+	width: 25%;
+}
+
+.mask {
+	z-index: 1;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	transition: visibility 600ms, opacity 600ms;
+	visibility: hidden;
+	opacity: 0.0;
+}
+
+.mask.active {
+	opacity: 0.8;
+	visibility: visible;
+}
+
+/* * * * * *  PROJECTS  * * * * * */
+
+.content {
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	/*filter: blur(0px);*/
+	// filter: opacity(100%);
+	// transition: filter $trns;
+}
+
+.project {
+	box-sizing: border-box;
+	margin: 2rem auto;
+    padding: 0;
+    overflow: hidden;
+    border: solid $projectbordercol;
+    border-width: 1px;
+    @include rsp(width,
+    			 100 - $margin-s * 2,
+    			 100 - $margin-l * 3);
+    @include rsp(height,
+    			 $projectheight-s,
+    			 $projectheight-l);
+}
+
+.project a {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.project div:first-child {
+	width: 100%;
+	@include rsp(height,
+				 $projectheight-s - $projectbtnheight,
+				 $projectheight-l - $projectbtnheight);
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background: {
+		repeat: no-repeat;
+		position: center center;
+		size: cover;
+	};
+}
+
+.project div:first-child ~ div {
+	box-sizing: border-box;
+	display: block;
+	float: left;
+
+	margin: 0;
+	padding-left: $margin-s / 2;
+	height: $projectbtnheight;
+	width: 80%;
+	top: 0;
+
+	background-color: $cttcol;
+	font-weight: $fontw-s;
+	font-size: 1.2rem;
+	color: $projecttitlecol;
+	border: 1px solid $projectbordercol;
+	border-width: 1px 1px 0px 0px;
+
+    line-height: $projectbtnheight;
+    // text-align: center;
+    vertical-align: middle;
+
+    transition: width $trns, background-color $trns, color $trns;
+}
+
+.project div:first-child ~ div + div {
+	width: 20%;
+	border-right: 0px;
+	transition: width $trns, color $trns;
+	font-size: 1rem;
+	font-weight: $fontw-s;
+	padding: 0;
+	text-align: center;
+	color: $projectyearcol;
+}
+
+/* * * * * *  LINKS  * * * * * */
+
+.top div:active, .top div.active {
+	background-color: $titlecol;
+	color: $headerbg;
+}

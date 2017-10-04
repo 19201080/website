@@ -1,0 +1,53 @@
+$m: "screen and (min-width:720px)";
+$l: "screen and (min-width:960px)";
+
+@mixin rsp($a, $b, $c) {
+	#{$a}: $b;
+	@media #{$l} {
+		#{$a}: $c;
+	}
+}
+
+$headerbg: #282828;
+@mixin bggradient {
+	@include background-image(radial-gradient(100% 25% at 50% 110%, $bgcol2 20%, $bgcol 90%));
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+$bgcol: #111111;
+$bgcol2: #303030;
+$bordercol: #CCC;
+$projectbordercol: #CCC;
+
+$titlecol: #FFF;
+$menutxtcol: #FFF;
+$txtcol: #CCC;
+$txtcolhover: #000;
+$projecttitlecol: #FFF;
+$projectyearcol: #FFF;
+$cttcol: #282828;
+$clpsdcol: #1919ff;
+$clpsdcol1: #46708A;
+$clpsdcol2: #4BACF5;
+$trns: 0.6s;
+
+$fontw-s: 300;
+$fontw-m: 400;
+$fontw-l: 600;
+
+$titlewidth-l: 70%;
+$titlewidth-s: 60%;
+$headerheight-l: 3rem;
+$headerheight-s: 2px;
+$margin-l: 10%;
+$margin-s: 8%;
+$projectmargin-l: 3%;
+$projectmargin-s: 3%;
+
+$projectheight-s: 16rem;
+$projectwidth-s: 90%;
+$projectheight-l: 24rem;
+$projectwidth-l: 72%;
+$projectbtnheight: 3rem;
+
+$gutter-l: 0.8rem;

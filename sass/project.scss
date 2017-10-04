@@ -1,0 +1,168 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+@import "vars";
+@import "grid";
+@import "screen";
+
+body {
+	overflow: scroll;
+}
+
+.page-wrapper {
+	position: relative;
+	float: left;
+	top: 0px;
+	left: 0px;
+}
+
+/* * * * * *  HEADER  * * * * * */
+
+.top .backbutton {
+	@include rsp(width, $headerheight-l, $headerheight-l * 2);
+	font-size: 1.5em;
+	font-weight: $fontw-s;
+	// line-height: 1.2em;
+}
+
+.top .backbutton a {
+	color: $menutxtcol;
+}
+
+.top div.projecttitle {
+	padding: 0;
+	// @include rsp(padding-right, $headerheight-l, $headerheight-l * 2);
+	@include rsp(width, calc(100% - #{$headerheight-l}), calc(100% - (#{$headerheight-l} * 2)));
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: $fontw-s;
+}
+
+.projecttitle a {
+	color: $titlecol;
+}
+
+.projecttitle * {
+	@include rsp(padding-right, $headerheight-l, $headerheight-l * 2);
+}
+
+/* * * * * *  FOOTER  * * * * * */
+
+.footer {
+	width: 100%;
+	// float: left;
+	// clear: both;
+	// position: relative;
+	bottom: 0;
+	left: 0;
+	box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: $headerheight-l;
+    background-color: $headerbg;
+}
+
+.footer div.nextproject, .footer div.prevproject {
+	float: left;
+	box-sizing: border-box;
+	width: 50%;
+	height: 100%;
+	border-top: 1px solid $bordercol;
+	color: $menutxtcol;
+}
+
+.footer div:first-child {
+	border-right: 1px solid $bordercol;
+}
+
+.footer div.empty {
+	// border-top: 0px;
+	// background-color: $bgcol;
+	// background-color: $bordercol;
+}
+
+.footer div a {
+	display: block;
+    line-height: 3rem;
+    color: $menutxtcol;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* * * * * *  GRID CONTENT  * * * * * */
+
+.main-title {
+	width: 100%;
+	display: block;
+	margin-top: $headerheight-l + $gutter-l * 12;
+	text-align: center;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.videocontainer {
+	padding-bottom: 56.25%;
+	position: relative;
+}
+
+.videocontainer iframe {
+	position: absolute;
+}
+
+.line {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: $bordercol;
+	clear:both;
+}
+
+.project-container p {
+	display: block;
+}
+
+/* * * * * *  TEXT STYLING  * * * * * */
+
+p {
+	color: $txtcol;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.2em;
+	font-weight: $fontw-m;
+	color: $titlecol;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: $fontw-s;
+	color: $txtcol;
+}
+
+h2 {
+	font-size: 1.8em;
+	line-height: 1.2em;
+	font-weight: $fontw-s;
+	color: $txtcol;
+}
+
+.project-container a {
+	color: $txtcol;
+	text-decoration: underline;
+}
+
+.backbutton {
+	font-family: sans-serif;
+}
