@@ -6,7 +6,7 @@
   </div>
 
   <div class="top about">
-  	<p> I'm étienne ndiaye, a designer based in Paris. My work combines user experience and product design, through projects involving physical prototyping, creative coding, user interfaces, webdesign, and design research. Right now, i'm doing some beekeeping and looking for resources about traditional skep making (feel free to get in touch if you have any). Full <a href="/files/cv.pdf" target="_blank">cv</a> and <a href="/files/portfolio.pdf" target="_blank">portfolio</a>.</p>
+  	<p> I'm étienne ndiaye, a designer based in Paris. My work combines interaction and product design, through projects involving physical prototyping, creative coding, user interfaces, webdesign, and design research. Right now, i'm doing some beekeeping and looking for resources about traditional skep making (feel free to get in touch if you have any). Full <a href="/files/cv.pdf" target="_blank">cv</a> and <a href="/files/portfolio.pdf" target="_blank">portfolio</a>.</p>
   </div>
 
   <div class="top contact">
