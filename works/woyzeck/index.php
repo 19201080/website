@@ -1,5 +1,6 @@
 <?php
 $title = "woyzeck";
+$summary = "Data-visualizing the clones of a theater play";
 $year = 2015;
 
 $content = array(array("woyzeck01.jpg", "col-10 left-1 image"),

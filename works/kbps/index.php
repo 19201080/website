@@ -1,5 +1,6 @@
 <?php
 $title = "kbps";
+$summary = "Building a multisensory music format for domestic concerts";
 $year = 2017;
 
 $content = array(array("kbps01.jpg", "col-10 left-1 image"),

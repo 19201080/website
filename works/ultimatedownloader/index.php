@@ -1,5 +1,6 @@
 <?php
 $title = "ultimate_downloader";
+$summary = "An airborne trap to lure illegal downloaders";
 $year = 2014;
 
 $content = array(array("ultimate01.jpg", "col-5 left-1 image"),

@@ -1,5 +1,6 @@
 <?php
 $title = "drawing conclusions";
+$summary = "Writing a story with a robotic hand";
 $year = 2016;
 
 $content = array(array("drawing01.jpg", "col-6 image"),

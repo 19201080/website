@@ -1,5 +1,6 @@
 <?php
 $title = "herbier";
+$summary = "A digital herbarium for generative plant species";
 $year = 2014;
 
 $content = array(array("herbier01.png", "col-5 left-1 image"),

@@ -1,5 +1,6 @@
 <?php
 $title = "black book";
+$summary = "A book to be read with a guitar amplifier";
 $year = 2014;
 
 $content = array(array("blackbook01.jpg", "col-10 left-1 image"),

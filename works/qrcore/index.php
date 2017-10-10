@@ -1,5 +1,6 @@
 <?php
 $title = "qrcore";
+$summary = "Prototyping a possible future for lottery games";
 $year = 2015;
 
 $content = array(array("132325021", "col-10 left-1 video"),
